@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+	#Header always set Access-Control-Allow-Origin "*"
+	#Header always set Access-Control-Allow-Methods "POST, GET, DELETE, PUT"
+	#Header always set Content-Type "application/json; charset=utf-8"
+	#Header always set Access-Control-Allow-Headers "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token"
+	#Header always set Access-Control-Allow-Credentials true
+	#Header always set Connection "Keep-Alive"
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^((?s).*)$ index.php [QSA,L]
+</IfModule>

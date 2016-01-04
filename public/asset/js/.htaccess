@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([a-z]+).js$ index.php?controller=$1
+    RewriteRule ^template/([a-z]+)/([a-z]+).js$ template.php?controller=$1&action=$2
+</IfModule>

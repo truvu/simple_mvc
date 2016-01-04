@@ -319,7 +319,7 @@ var Div = Dom.createClass({
     },
     render: function(){
         return Dom.node(
-            '<div/>,
+            '<div/>',
             null,
             Dom.node('<div>My name is {this.state.name}</div>'),
             Dom.node(
